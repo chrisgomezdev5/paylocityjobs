@@ -9,8 +9,6 @@ This repo contains node scripts to web scrape paylocity job posting pages, a job
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
