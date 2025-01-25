@@ -1,7 +1,5 @@
 # Paylocity Jobs Scraper
 
-# Project Name
-
 This repo contains node scripts to web scrape paylocity job posting pages, a job imports aggregator and a simple web server with an api endpoint 
 
 Deployment to Netlify now supported through serverless functions located at netlify\functions
