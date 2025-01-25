@@ -24,6 +24,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Install Dependencies for Scraper
+        working-directory: ./scraper
+        run: npm install
+
+      - name: Install Dependencies for datastore
+        working-directory: ./datastore
+        run: npm install
+
       - name: Build Data
         run: npm run build-data
 
