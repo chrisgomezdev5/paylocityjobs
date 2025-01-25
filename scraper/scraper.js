@@ -7,7 +7,10 @@ const path = require('path');
 const getWebPageContentAndSave = async (url, filename) => {
   try {
     // Launch a new browser instance
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox'],
+      timeout: 10000,
+    });
 
     // Open a new page in the browser
     const page = await browser.newPage();
