@@ -11,9 +11,42 @@ exports.handler = async (event, context) => {
 
     //const data = fs.readFileSync(filePath, "utf-8");
 
+
+
+
+
+    function getConcatenatedNames(directory) {
+        let concatenatedNames = "";
+      
+        function traverseDir(dir) {
+          // Read all files and folders in the directory
+          const items = fs.readdirSync(dir);
+      
+          items.forEach((item) => {
+            const fullPath = path.join(dir, item);
+      
+            // Add the item name to the concatenated string
+            concatenatedNames += item;
+      
+            // If it's a directory, recurse into it
+            if (fs.statSync(fullPath).isDirectory()) {
+              traverseDir(fullPath);
+            }
+          });
+        }
+      
+        traverseDir(directory);
+        return concatenatedNames;
+      }
+      
+      // Example usage
+      const concatenatedNames = getConcatenatedNames(__dirname);
+
+
+
     return {
       statusCode: 200,
-      body: __dirname,
+      body: concatenatedNames,
       headers: {
         //"Content-Type": "application/json",
         "Content-Type": "text/html; charset=utf-8",
