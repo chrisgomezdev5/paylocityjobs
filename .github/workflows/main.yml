@@ -28,7 +28,7 @@ jobs:
         run: npm run build-data
 
       - name: Deploy to Netlify
-        uses: npx netlify-cli
+        run: npx netlify-cli
         with:
           args: deploy --dir=dist --prod
         env:
