@@ -2,10 +2,11 @@ name: Build Data and Deploy to Netlify
 
 on:
   schedule:
-    - cron: "0 */4 * * *" # Run every 4 hours
+    - cron: "0 */4 * * *" # Runs every 4 hours
   push:
     branches:
       - main
+  workflow_dispatch: # Enables manual triggering
 
 jobs:
   build:
