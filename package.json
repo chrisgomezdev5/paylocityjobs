@@ -4,7 +4,8 @@
   "description": "This repo contains node scripts to web scrape paylocity job posting pages, a job imports aggregator and a simple web server with an api endpoint",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-data": "node scraper/scraper.js && node datastore/datastore.js"
   },
   "author": "",
   "license": "ISC"

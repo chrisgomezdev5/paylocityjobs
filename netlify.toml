@@ -1,6 +1,2 @@
-[build]
-  command = "npm run build-data && npm run build" # Generate data and static files
-  publish = "dist" # Folder to deploy static files
-
 [functions]
   directory = "netlify/functions" # Folder for serverless functions
