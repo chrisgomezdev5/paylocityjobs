@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Define the path to the JSON file
-const DATASTORE_PATH = path.join(__dirname, '../datastore/datastore.json');
+const DATASTORE_PATH = path.join(__dirname, '../../datastore/datastore.json');
 
 // API endpoint to get JSON data
 app.get('/api/data', (req, res) => {
