@@ -572,32 +572,6 @@
     "IndeedRemoteType": 2
   },
   {
-    "JobId": 2953564,
-    "JobTitle": "General Inspector - 2nd Shift",
-    "LocationName": "Automotive - Chicopee",
-    "ShouldDisplayLocation": true,
-    "PublishedDate": "2025-01-06T10:26:19-06:00",
-    "Description": "",
-    "IsInternal": false,
-    "HiringDepartment": null,
-    "JobLocation": {
-      "LocationId": 2876409,
-      "ModuleId": 12872,
-      "Name": "Automotive - Chicopee",
-      "Address": "106 Lonczak Drive",
-      "Address2": "Automotive - Chicopee",
-      "Metro": null,
-      "City": "Chicopee",
-      "State": "MA",
-      "Zip": "01022",
-      "Country": "USA",
-      "County": null,
-      "SmartyAddressId": "fcb91fa4-9295-4cf1-8014-f9f3c70d6f1a"
-    },
-    "IsRemote": false,
-    "IndeedRemoteType": 2
-  },
-  {
     "JobId": 2941635,
     "JobTitle": "Quality Engineer (Internal)",
     "LocationName": "Automotive - Chicopee",
@@ -686,32 +660,6 @@
     "HiringDepartment": null,
     "JobLocation": {
       "LocationId": 2806130,
-      "ModuleId": 12872,
-      "Name": "Automotive - Chicopee",
-      "Address": "106 Lonczak Drive",
-      "Address2": "Automotive - Chicopee",
-      "Metro": null,
-      "City": "Chicopee",
-      "State": "MA",
-      "Zip": "01022",
-      "Country": "USA",
-      "County": null,
-      "SmartyAddressId": "fcb91fa4-9295-4cf1-8014-f9f3c70d6f1a"
-    },
-    "IsRemote": false,
-    "IndeedRemoteType": 2
-  },
-  {
-    "JobId": 2867449,
-    "JobTitle": "General Inspector - 3rd Shift",
-    "LocationName": "Automotive - Chicopee",
-    "ShouldDisplayLocation": true,
-    "PublishedDate": "2024-11-19T17:08:06-06:00",
-    "Description": "",
-    "IsInternal": false,
-    "HiringDepartment": null,
-    "JobLocation": {
-      "LocationId": 2790142,
       "ModuleId": 12872,
       "Name": "Automotive - Chicopee",
       "Address": "106 Lonczak Drive",

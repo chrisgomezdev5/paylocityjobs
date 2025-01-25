@@ -1,0 +1,16 @@
+# Ignore node_modules folder
+scraper/node_modules/
+webserver/node_modules/
+
+# Ignore data folder and files
+scraper/imports/
+datastore/datastore.json
+
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore build output
+/dist/

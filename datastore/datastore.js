@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const importsFolder = path.join(__dirname, 'imports');
+const importsFolder = path.join(__dirname, '../scraper/imports');
 const outputFilePath = path.join(__dirname, 'datastore.json');
 
 (async () => {
