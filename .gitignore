@@ -6,7 +6,7 @@ webserver/node_modules/
 # Ignore data folder and files
 scraper/imports/*
 datastore/datastore.json
-#dist/datastore.json
+dist/datastore.json
 
 # Ignore log files
 *.log
@@ -16,7 +16,7 @@ datastore/datastore.json
 
 # Ignore build output
 #/dist/*
-scraper/input.json
+#scraper/input.json
 
 # Local Netlify folder
 .netlify
