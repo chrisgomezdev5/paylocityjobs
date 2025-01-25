@@ -3,7 +3,7 @@ scraper/node_modules/
 webserver/node_modules/
 
 # Ignore data folder and files
-scraper/imports/
+scraper/imports/*
 datastore/datastore.json
 
 # Ignore log files
