@@ -4,6 +4,8 @@
 
 This repo contains node scripts to web scrape paylocity job posting pages, a job imports aggregator and a simple web server with an api endpoint 
 
+Deployment to Netlify now supported through serverless functions located at netlify\functions
+
 ## Table of Contents
 
 - [Features](#features)
@@ -17,6 +19,12 @@ List the key features of your project. For example:
 - Scraper - Node script that pulls the jobs from a paylocity web page. The pages contain json that contain an array of jobs. Using puppeteer, javascript is excuted againt the page to extract the json and save it to a file in the imports folder
 - Datastore - Node script that take each file in the imports folder and consolidates all the json jobs array into one file called datastore.json
 - Webserver - Node script that runs an express.js server for an api that return the jobs data.
+
+## Netilfy
+Solution now supports Netfily hosting through serverless functions
+
+- netlify\functions\server.js returns the json data contained in dist\datasource.json
+- netlify.toml - netlify configuration
 
 ## Installation
 
