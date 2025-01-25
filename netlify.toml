@@ -1,2 +1,3 @@
 [functions]
   directory = "netlify/functions" # Folder for serverless functions
+  environment = { BASE_DIR = "/var/task/" }
