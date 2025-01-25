@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
     //const filePath = path.resolve(__dirname, "../../dist/datastore.json");
 
     const baseDir = process.env.BASE_DIR || __dirname;
-    const filePath = path.resolve(__dirname, "datastore.json");
+    const filePath = path.resolve(__dirname, "data/datastore.json");
 
     const data = fs.readFileSync(filePath, "utf-8");
     return {
