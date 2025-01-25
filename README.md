@@ -45,7 +45,7 @@ Step-by-step instructions to install and set up your project locally:
 
 ## Usage
 
-The scrapper should be run first but not before setting the urls and file name at the bottom of the script
+The scrapper should be run first but not before creating a file called input.json with a list of urls and filename in json form. An example file, sampleinput.json, is included.
 
 ```bash
 node scraper.js

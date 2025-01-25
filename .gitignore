@@ -14,3 +14,4 @@ datastore/datastore.json
 
 # Ignore build output
 /dist/
+scraper/input.json

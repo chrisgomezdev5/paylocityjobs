@@ -53,14 +53,15 @@ const getWebPageContentAndSave = async (url, filename) => {
 
 // Example usage
 (async () => {
-  const url1 = 'https://recruiting.paylocity.com/recruiting/jobs/All/58719e28-3ea1-47ab-b11e-1fcd3cff5b03/U-S-Tsubaki-Power-Transmission-LLC?location=All%20Locations&department=All%20Departments'; // Replace with your desired URL
-  const filename1 = 'pageData1.json'; // Replace with your desired filename
-  
-  const url2 = 'https://recruiting.paylocity.com/recruiting/jobs/All/a5f3629e-f97d-44ee-beff-2fd934df9426/US-Tsubaki-Automotive-LLC'; // Replace with your desired URL
-  const filename2 = 'pageData2.json'; // Replace with your desired filename
   try {
-    await getWebPageContentAndSave(url1, filename1);
-    await getWebPageContentAndSave(url2, filename2);
+    // Read URLs and filenames from a JSON file
+    const inputFilePath = path.resolve(__dirname, 'input.json');
+    const inputData = JSON.parse(fs.readFileSync(inputFilePath, 'utf8'));
+
+    // Loop through each entry and process
+    for (const { url, filename } of inputData) {
+      await getWebPageContentAndSave(url, filename);
+    }
   } catch (error) {
     console.error('Failed to fetch or save webpage content:', error);
   }
