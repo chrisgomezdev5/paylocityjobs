@@ -1,26 +1,22 @@
-const fs = require("fs");
-const path = require("path");
+//const fs = require("fs");
+//const path = require("path");
+const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
   try {
-    // Load datastore.json from the static files
-    //const filePath = path.resolve(__dirname, "../../dist/datastore.json");
+    const baseUrl = process.env.NETLIFY_URL || 'http://localhost:8888';
+    const response = await fetch(baseUrl);
+    const jsonData = await response.json();
 
-    const baseDir = process.env.BASE_DIR || __dirname;
-    const filePath = path.resolve(baseDir, "datastore.json");
-
-    const data = fs.readFileSync(filePath, "utf-8");
     return {
       statusCode: 200,
-      body: data,
-      headers: {
-        "Content-Type": "application/json",
-      },
+      body: JSON.stringify(jsonData),
     };
   } catch (error) {
+    console.error('Error fetching data:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Failed to load data" }),
+      body: JSON.stringify({ message: 'Internal Server Error' }),
     };
   }
 };
