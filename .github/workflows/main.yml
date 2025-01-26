@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Create Env File
+        run: |
+          touch .env
+          echo NETLIFY_URL=${{ secrets.NETLIFY_URL }} >> .env
+
       - name: Checkout Code
         uses: actions/checkout@v3
 
@@ -37,8 +42,6 @@ jobs:
         run: npm install
 
       - name: Build Data
-        env:
-            NETLIFY_URL: ${{ secrets.NETLIFY_URL }}
         run: npm run build-data
 
       - name: Deploy to Netlify
