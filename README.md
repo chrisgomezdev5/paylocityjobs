@@ -2,7 +2,7 @@
 
 This repo contains node scripts to web scrape paylocity job posting pages, a job imports aggregator and a simple web server with an api endpoint 
 
-Deployment to Netlify now supported through serverless functions located at netlify\functions
+Deployment to Netlify now supported through serverless functions and GitHub Actions
 
 ## Table of Contents
 
@@ -17,16 +17,18 @@ List the key features of your project. For example:
 - Scraper - Node script that pulls the jobs from a paylocity web page. The pages contain json that contain an array of jobs. Using puppeteer, javascript is excuted againt the page to extract the json and save it to a file in the imports folder
 - Datastore - Node script that take each file in the imports folder and consolidates all the json jobs array into one file called datastore.json
 - Webserver - Node script that runs an express.js server for an api that return the jobs data.
+-netlify\functions\server - Serverless function that returns the datastore json for deployement to Netlify
 
-## Netilfy
-Solution now supports Netfily hosting through serverless functions
+## Netilfy & GitHub Actions
+Solution now supports Netfily serverless functions and GitHub Action Workflows
 
 - netlify\functions\server.js returns the json data contained in dist\datasource.json
-- netlify.toml - netlify configuration
+- netlify.toml - Netlify configuration
+- main.yml - GitHub Actions workflow to build the datasource.json file and deploy it and  the serverless function to Netlify
 
 ## Installation
 
-Step-by-step instructions to install and set up your project locally:
+Step-by-step instructions to install and set up your project locally (Go to Serverless Installation for Netlify and GitHub):
 
 1. Clone the repository:
    ```bash
@@ -71,4 +73,18 @@ node server.js
 
 The jobs from the api can then be used by a front-end search engine.
 
+## Serverless Installation
+1. Create new project in Netlify from the connected GitHub repo
+
+2. Add an environment variable called NETLIFY_URL and set to https://YOURPROJECTNAME.netlify.app/datastore.json
+
+3. Add the following environment variables to the GitHub repo:
+   1. NETLIFY_AUTH_TOKEN 
+   2. NETLIFY_SITE_ID
+
+The GitHub Actions workflow will build and deploy to Netlify and the serverless function will return the data through:
+
+https://YOURPROJECTNAME.netlify.app/.netlify/functions/server
+
+There is also a 4 hour cron job that runs the GitHub workflow every four hours.
 
