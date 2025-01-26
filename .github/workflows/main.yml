@@ -13,13 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create Env File
-        run: |
-          touch .env
-          echo NETLIFY_URL=${{ secrets.NETLIFY_URL }} >> .env
 
-      - name: Display Netlify URL
-        run: echo process.env.NETLIFY_URL
+      - name: Echo Netlify URL
+        run: echo "Netlify URL: $NETLIFY_URL"
+        env:
+          NETLIFY_URL: ${{ secrets.NETLIFY_URL }}
 
       - name: Checkout Code
         uses: actions/checkout@v3
