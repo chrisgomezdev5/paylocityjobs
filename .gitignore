@@ -2,6 +2,7 @@
 node_modules
 scraper/node_modules/
 webserver/node_modules/
+netlify/functions/server/node_modules/
 
 # Ignore data folder and files
 scraper/imports/*

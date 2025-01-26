@@ -32,6 +32,10 @@ jobs:
         working-directory: ./datastore
         run: npm install
 
+      - name: Install Dependencies for datastore
+        working-directory: ./netlify/functions/server
+        run: npm install
+
       - name: Build Data
         env:
             NETLIFY_URL: ${{ secrets.NETLIFY_URL }}

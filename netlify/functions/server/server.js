@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
   try {
-    const baseUrl = process.env.NETLIFY_URL || 'http://localhost:8888';
+    const baseUrl = process.env.NETLIFY_URL || 'http://localhost:8888/dist/datastore.json';
     const response = await fetch(baseUrl);
     const jsonData = await response.json();
 
