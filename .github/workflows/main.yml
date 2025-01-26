@@ -18,6 +18,9 @@ jobs:
           touch .env
           echo NETLIFY_URL=${{ secrets.NETLIFY_URL }} >> .env
 
+      -name: Display Netlify NETLIFY_URL
+        run echo process.env.NETLIFY_URL
+
       - name: Checkout Code
         uses: actions/checkout@v3
 
